@@ -6,7 +6,7 @@
   <title>Política de Privacidad</title>
   <style>
     :root {
-      --color-primario: #2C3E50; /* gris oscuro */
+      --color-primario: #2C3E50;
       --color-secundario: #ECF0F1;
       --color-texto: #333;
       --max-width: 800px;
@@ -38,7 +38,6 @@
 
     header h1 {
       font-size: 2.5em;
-      color: white; /* ya no es azul */
     }
 
     .contenido {
@@ -51,7 +50,7 @@
     }
 
     h2 {
-      color: var(--color-primario); /* gris oscuro */
+      color: var(--color-primario);
       margin-top: 25px;
     }
 
@@ -64,6 +63,22 @@
       font-size: 0.9em;
       color: #777;
       margin-top: 40px;
+    }
+
+    .lang-switch {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .lang-switch button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #2C3E50;
+      color: white;
+      cursor: pointer;
     }
 
     @media (max-width: 600px) {
@@ -79,11 +94,18 @@
 <body>
 
   <header>
-    <h1>Política de Privacidad</h1>
+    <h1>Política de Privacidad / Privacy Policy</h1>
   </header>
 
-  <div class="contenido">
-    <p>En Dev Studio Pro, respetamos tu privacidad y estamos comprometidos a proteger la información personal que compartes con nosotros.</p>
+  <div class="lang-switch">
+    <button onclick="switchLang('es')">Español</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+
+  <div class="contenido" id="es">
+    <p>Esta política de privacidad se aplica a la aplicación "<strong>Horario de Clases</strong>", desarrollada por "<strong>Wiwi</strong>", publicada en Google Play.</p>
+
+    <p>En Wiwi, respetamos tu privacidad y estamos comprometidos a proteger la información personal que compartes con nosotros.</p>
 
     <h2>1. Información que recopilamos</h2>
     <p>Podemos recopilar información personal como tu nombre, dirección de correo electrónico, número de teléfono, etc., cuando usas nuestro sitio.</p>
@@ -107,9 +129,43 @@
     <p>Si tienes preguntas sobre esta política, puedes escribirnos a: <strong>devprostudios9@gmail.com</strong></p>
   </div>
 
+  <div class="contenido" id="en" style="display: none;">
+    <p>This privacy policy applies to the app "<strong>Horario de Clases</strong>", developed by "<strong>Wiwi</strong>", published on Google Play.</p>
+
+    <p>At Wiwi, we respect your privacy and are committed to protecting the personal information you share with us.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>We may collect personal information such as your name, email address, phone number, etc., when you use our site.</p>
+
+    <h2>2. Use of Information</h2>
+    <p>We use your information to improve our services, communicate with you, and offer a better user experience.</p>
+
+    <h2>3. Cookies</h2>
+    <p>Our site uses cookies to improve navigation. You can configure your browser to reject them if you wish.</p>
+
+    <h2>4. Third Parties</h2>
+    <p>We do not share your personal information with third parties without your consent, unless required by law.</p>
+
+    <h2>5. Security</h2>
+    <p>We implement security measures to protect your personal information from unauthorized access.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We reserve the right to modify this policy. Any changes will be posted on this page.</p>
+
+    <h2>7. Contact</h2>
+    <p>If you have questions about this policy, you can contact us at: <strong>devprostudios9@gmail.com</strong></p>
+  </div>
+
   <footer>
-    &copy; 2025 Dev Studio Pro. Todos los derechos reservados.
+    &copy; 2025 Wiwi. Todos los derechos reservados.
   </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.getElementById('es').style.display = (lang === 'es') ? 'block' : 'none';
+      document.getElementById('en').style.display = (lang === 'en') ? 'block' : 'none';
+    }
+  </script>
 
 </body>
 </html>
